@@ -9,13 +9,13 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2-beta
+    - uses: actions/checkout@v3
     - name: FRC Build & Test
       uses: ewpratten/FRC-actions@v1
       with:
-        build_mode: 'all'
+        build_mode: 'build'
 ```
 
 The `build_mode` property can be any one of:

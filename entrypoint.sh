@@ -1,9 +1,11 @@
 #!/bin/sh -l
 
 # Init gradle
-/opt/gradle/gradle-5.0/bin/gradle wrapper
+/opt/gradle/gradle-7.4/bin/gradle wrapper
 
 chmod +x gradlew
+
+./gradlew installRoboRioToolchain
 
 # Check for correct build command
 if [ "$1" = "build" ]; then
