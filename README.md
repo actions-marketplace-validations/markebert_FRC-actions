@@ -4,7 +4,7 @@ This action was designed to give FRC teams a simple way to automatically run tes
 ## Setup
 To get this action running in your project, add the following config to `.github/workflows/frcbuild.yml`:
 ```yml
-name: FRC Build & Test
+name: Team 3171 FRC Build
 on: [push, pull_request]
 
 jobs:
@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: FRC Build & Test
-      uses: markebert/FRC-actions@v1
+    - name: Team 3171 FRC Build
+      uses: markebert/FRC-actions@v2
       with:
         build_mode: 'build'
 ```
