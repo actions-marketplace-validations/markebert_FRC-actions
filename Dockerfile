@@ -2,12 +2,13 @@ FROM ubuntu:latest
 
 COPY LICENSE README.md /
 
-RUN apt-get update
+RUN apt update && apt upgrade -y
 
 # Install gradle
-RUN apt-get install wget -y
-RUN apt-get install unzip -y
-RUN apt-get install openjdk-11-jre-headless -y
+RUN apt install wget -y
+RUN apt install unzip -y
+RUN apt install openjdk-11-jre-headless -y
+RUN rm -r -f /tmp
 RUN wget https://services.gradle.org/distributions/gradle-7.4-bin.zip -P /tmp
 RUN unzip -d /opt/gradle /tmp/gradle-7.4-bin.zip
 
