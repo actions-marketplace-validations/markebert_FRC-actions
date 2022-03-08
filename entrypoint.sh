@@ -5,8 +5,6 @@
 
 chmod +x gradlew
 
-./gradlew installRoboRioToolchain
-
 # Check for correct build command
 if [ "$1" = "build" ]; then
     echo "Running only build task"
